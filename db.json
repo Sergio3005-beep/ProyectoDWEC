@@ -1,8 +1,7 @@
-
 {
   "autores": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Federico García Lorca",
       "nacimiento": 1898,
       "fallecimiento": 1936,
@@ -16,7 +15,7 @@
       "lugar_nacimiento": "Fuente Vaqueros (Granada)"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Pedro Salinas",
       "nacimiento": 1891,
       "fallecimiento": 1951,
@@ -29,7 +28,7 @@
       "lugar_nacimiento": "Madrid"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Jorge Guillén",
       "nacimiento": 1893,
       "fallecimiento": 1984,
@@ -42,7 +41,7 @@
       "lugar_nacimiento": "Valladolid"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Rafael Alberti",
       "nacimiento": 1902,
       "fallecimiento": 1999,
@@ -55,7 +54,7 @@
       "lugar_nacimiento": "El Puerto de Santa María (Cádiz)"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Luis Cernuda",
       "nacimiento": 1902,
       "fallecimiento": 1963,
@@ -68,7 +67,7 @@
       "lugar_nacimiento": "Sevilla"
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Vicente Aleixandre",
       "nacimiento": 1898,
       "fallecimiento": 1984,
@@ -81,7 +80,7 @@
       "lugar_nacimiento": "Sevilla"
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "Gerardo Diego",
       "nacimiento": 1896,
       "fallecimiento": 1987,
@@ -94,7 +93,7 @@
       "lugar_nacimiento": "Santander"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Dámaso Alonso",
       "nacimiento": 1898,
       "fallecimiento": 1990,
@@ -107,7 +106,7 @@
       "lugar_nacimiento": "Madrid"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Ernestina de Champourcín",
       "nacimiento": 1905,
       "fallecimiento": 1999,
@@ -120,7 +119,7 @@
       "lugar_nacimiento": "Vitoria"
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "María Teresa León",
       "nacimiento": 1903,
       "fallecimiento": 1988,
@@ -133,5 +132,6 @@
       "lugar_nacimiento": "Logroño"
     }
   ],
-  "favoritos": []
+  "favoritos": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

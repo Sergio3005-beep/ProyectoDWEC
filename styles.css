@@ -74,7 +74,8 @@ h1 {
   flex-wrap: wrap;
 }
 
-.formulario input {
+.formulario input,
+.formulario select {
   flex: 1;
   min-width: 200px;
   padding: 0.75rem 1rem;
@@ -85,7 +86,8 @@ h1 {
   transition: border-color 0.3s;
 }
 
-.formulario input:focus {
+.formulario input:focus,
+.formulario select:focus {
   border-color: #3498db;
 }
 
