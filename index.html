@@ -8,31 +8,59 @@
   </head>
   <body>
     <main class="container">
-      <h1>Autores de la Generación del 27</h1>
+      <h1>Generación del 27</h1>
 
-      <!-- Formulario con 3 parámetros de búsqueda -->
-      <form id="searchForm">
+      <!-- Pestañas: cada una es una categoría de búsqueda -->
+      <nav class="pestanas">
+        <button type="button" class="pestana activa" data-panel="autores">Autores</button>
+        <button type="button" class="pestana" data-panel="obras">Obras</button>
+        <button type="button" class="pestana" data-panel="favoritos">Mis favoritos</button>
+      </nav>
+
+      <!-- Búsqueda 1: autores (API privada) - 3 parámetros -->
+      <form id="formAutores" class="formulario">
         <input type="text" id="nombreInput" placeholder="Nombre del autor..." />
-        <input
-          type="text"
-          id="epocaInput"
-          placeholder="Época (ej. Generación del 27)..."
-        />
+        <input type="text" id="lugarInput" placeholder="Lugar de nacimiento..." />
         <input
           type="number"
           id="anoInput"
-          placeholder="Año nacimiento mínimo..."
+          placeholder="Nacido a partir del año..."
+          min="1800"
+          max="2000"
         />
-        <button type="submit">Buscar</button>
+        <button type="submit">Buscar autores</button>
       </form>
 
-      <!-- Contenedor de Errores -->
-      <div id="errorContainer" class="hidden"></div>
+      <!-- Búsqueda 2: obras (API pública) - 3 parámetros -->
+      <form id="formObras" class="formulario hidden">
+        <input type="text" id="tituloInput" placeholder="Título de la obra..." />
+        <input type="text" id="autorInput" placeholder="Autor..." />
+        <input
+          type="number"
+          id="anoObraInput"
+          placeholder="Publicada a partir del año..."
+          min="1000"
+          max="2100"
+        />
+        <button type="submit">Buscar obras</button>
+      </form>
 
-      <!-- Resultados (Nivel 1 y Nivel 2 de anidamiento) -->
-      <section id="resultadosContainer" class="grid-autores"></section>
+      <!-- Mensajes -->
+      <div id="errorContainer" class="mensaje error hidden"></div>
+      <div id="infoContainer" class="mensaje info hidden"></div>
+
+      <!-- Resultados -->
+      <section id="resultados" class="grid"></section>
+
+      <!-- Ventana con el detalle de una obra (nivel 3 de anidamiento) -->
+      <dialog id="detalle">
+        <div id="contenidoDetalle"></div>
+        <p id="mensajeDetalle" class="mensaje-detalle"></p>
+        <button type="button" id="cerrarDetalle" class="boton-secundario">Cerrar</button>
+      </dialog>
     </main>
 
+    <script src="api.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

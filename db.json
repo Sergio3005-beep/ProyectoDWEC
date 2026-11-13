@@ -1,3 +1,4 @@
+
 {
   "autores": [
     {
@@ -6,116 +7,131 @@
       "nacimiento": 1898,
       "fallecimiento": 1936,
       "epoca": "Generación del 27",
-      "obras_destacadas": ["Romancero gitano", "Poeta en Nueva York", "La casa de Bernarda Alba", "Bodas de sangre"]
-  },
-
-  {
-    "id": 2,
-    "nombre": "Pedro Salinas",
-    "nacimiento": 1891,
-    "fallecimiento": 1951,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "La voz a ti debida",
-      "Razón de amor",
-      "El contemplado"
-    ]
-  },
-  {
-    "id": 3,
-    "nombre": "Jorge Guillén",
-    "nacimiento": 1893,
-    "fallecimiento": 1984,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "Cántico",
-      "Clamor",
-      "Homenaje"
-    ]
-  },
-  {
-    "id": 4,
-    "nombre": "Rafael Alberti",
-    "nacimiento": 1902,
-    "fallecimiento": 1999,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "Marinero en tierra",
-      "Sobre los ángeles",
-      "La arboleda perdida"
-    ]
-  },
-  {
-    "id": 5,
-    "nombre": "Luis Cernuda",
-    "nacimiento": 1902,
-    "fallecimiento": 1963,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "La realidad y el deseo",
-      "Donde habite el olvido",
-      "Ocnos"
-    ]
-  },
-  {
-    "id": 6,
-    "nombre": "Vicente Aleixandre",
-    "nacimiento": 1898,
-    "fallecimiento": 1984,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "La destrucción o el amor",
-      "Sombra del paraíso",
-      "Historia del corazón"
-    ]
-  },
-  {
-    "id": 7,
-    "nombre": "Gerardo Diego",
-    "nacimiento": 1896,
-    "fallecimiento": 1987,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "Imagen",
-      "Manual de espumas",
-      "Versos humanos"
-    ]
-  },
-  {
-    "id": 8,
-    "nombre": "Dámaso Alonso",
-    "nacimiento": 1898,
-    "fallecimiento": 1990,
-    "epoca": "Generación del 27",
-    "obras_destacadas": [
-      "Hijos de la ira",
-      "Poemas puros, poemillas de la ciudad",
-      "Oscura noticia"
-    ]
-  },
-  {
-    "id": 9,
-    "nombre": "Ernestina de Champourcín",
-    "nacimiento": 1905,
-    "fallecimiento": 1999,
-    "epoca": "Generación del 27 (Las Sinsombrero)",
-    "obras_destacadas": [
-      "Cántico inútil",
-      "La voz en el viento",
-      "La casa de enfrente"
-    ]
-  },
-  {
-    "id": 10,
-    "nombre": "María Teresa León",
-    "nacimiento": 1903,
-    "fallecimiento": 1988,
-    "epoca": "Generación del 27 (Las Sinsombrero)",
-    "obras_destacadas": [
-      "Memoria de la melancolía",
-      "Cuentos para soñar",
-      "Rosa-Fría, patinadora de la luna"
-    ]
-  }
-]
+      "obras_destacadas": [
+        "Romancero gitano",
+        "Poeta en Nueva York",
+        "La casa de Bernarda Alba",
+        "Bodas de sangre"
+      ],
+      "lugar_nacimiento": "Fuente Vaqueros (Granada)"
+    },
+    {
+      "id": 2,
+      "nombre": "Pedro Salinas",
+      "nacimiento": 1891,
+      "fallecimiento": 1951,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "La voz a ti debida",
+        "Razón de amor",
+        "El contemplado"
+      ],
+      "lugar_nacimiento": "Madrid"
+    },
+    {
+      "id": 3,
+      "nombre": "Jorge Guillén",
+      "nacimiento": 1893,
+      "fallecimiento": 1984,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "Cántico",
+        "Clamor",
+        "Homenaje"
+      ],
+      "lugar_nacimiento": "Valladolid"
+    },
+    {
+      "id": 4,
+      "nombre": "Rafael Alberti",
+      "nacimiento": 1902,
+      "fallecimiento": 1999,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "Marinero en tierra",
+        "Sobre los ángeles",
+        "La arboleda perdida"
+      ],
+      "lugar_nacimiento": "El Puerto de Santa María (Cádiz)"
+    },
+    {
+      "id": 5,
+      "nombre": "Luis Cernuda",
+      "nacimiento": 1902,
+      "fallecimiento": 1963,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "La realidad y el deseo",
+        "Donde habite el olvido",
+        "Ocnos"
+      ],
+      "lugar_nacimiento": "Sevilla"
+    },
+    {
+      "id": 6,
+      "nombre": "Vicente Aleixandre",
+      "nacimiento": 1898,
+      "fallecimiento": 1984,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "La destrucción o el amor",
+        "Sombra del paraíso",
+        "Historia del corazón"
+      ],
+      "lugar_nacimiento": "Sevilla"
+    },
+    {
+      "id": 7,
+      "nombre": "Gerardo Diego",
+      "nacimiento": 1896,
+      "fallecimiento": 1987,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "Imagen",
+        "Manual de espumas",
+        "Versos humanos"
+      ],
+      "lugar_nacimiento": "Santander"
+    },
+    {
+      "id": 8,
+      "nombre": "Dámaso Alonso",
+      "nacimiento": 1898,
+      "fallecimiento": 1990,
+      "epoca": "Generación del 27",
+      "obras_destacadas": [
+        "Hijos de la ira",
+        "Poemas puros, poemillas de la ciudad",
+        "Oscura noticia"
+      ],
+      "lugar_nacimiento": "Madrid"
+    },
+    {
+      "id": 9,
+      "nombre": "Ernestina de Champourcín",
+      "nacimiento": 1905,
+      "fallecimiento": 1999,
+      "epoca": "Generación del 27 (Las Sinsombrero)",
+      "obras_destacadas": [
+        "Cántico inútil",
+        "La voz en el viento",
+        "La casa de enfrente"
+      ],
+      "lugar_nacimiento": "Vitoria"
+    },
+    {
+      "id": 10,
+      "nombre": "María Teresa León",
+      "nacimiento": 1903,
+      "fallecimiento": 1988,
+      "epoca": "Generación del 27 (Las Sinsombrero)",
+      "obras_destacadas": [
+        "Memoria de la melancolía",
+        "Cuentos para soñar",
+        "Rosa-Fría, patinadora de la luna"
+      ],
+      "lugar_nacimiento": "Logroño"
+    }
+  ],
+  "favoritos": []
 }
