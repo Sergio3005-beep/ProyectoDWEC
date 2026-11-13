@@ -25,155 +25,99 @@ h1 {
   color: #2c3e50;
   font-size: 2.2rem;
 }
- 
+
+/* Formulario de búsqueda */
+#searchForm {
+    display: flex;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#searchForm input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#searchForm input:focus {
+    border-color: #3498db;
+}
+
+#searchForm button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchForm button:hover {
+    background-color: #2980b9;
+}
+
+/* Contenedor de errores */
+#errorContainer {
+    background-color: #e74c3c;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
 .hidden {
-  display: none !important;
+    display: none;
 }
- 
-/* Pestañas */
-.pestanas {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+
+/* Cuadrícula de resultados (Nivel 1) */
+.grid-autores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
- 
-.pestana {
-  background: #ffffff;
-  color: #2c3e50;
-  border: 1px solid #ccc;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+
+/* Tarjeta individual de cada autor */
+.tarjeta-autor {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #3498db;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
- 
-.pestana:hover {
-  background: #eaf3fb;
+
+.tarjeta-autor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
- 
-.pestana.activa {
-  background: #3498db;
-  border-color: #3498db;
-  color: white;
+
+.tarjeta-autor h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
- 
-/* Formularios de búsqueda */
-.formulario {
-  display: flex;
-  gap: 1rem;
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+
+.tarjeta-autor p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
 }
- 
-.formulario input {
-  flex: 1;
-  min-width: 200px;
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s;
-}
- 
-.formulario input:focus {
-  border-color: #3498db;
-}
- 
-.formulario button {
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
- 
-.formulario button:hover {
-  background-color: #2980b9;
-}
- 
-/* Mensajes */
-.mensaje {
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: 500;
-}
- 
-.mensaje.error {
-  background-color: #e74c3c;
-  color: white;
-}
- 
-.mensaje.info {
-  background-color: #e8f4fd;
-  color: #1f5f8b;
-  border: 1px solid #b9dcf5;
-}
- 
-/* Cuadrícula de resultados */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
- 
-/* Tarjeta (autor, obra o favorito) */
-.tarjeta {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border-top: 4px solid #3498db;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
- 
-.tarjeta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
- 
-.tarjeta h3 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
- 
-.tarjeta p {
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-}
- 
-.tarjeta-obra {
-  border-top-color: #e67e22;
-}
- 
-.tarjeta-obra img {
-  display: block;
-  height: 180px;
-  max-width: 100%;
-  object-fit: contain;
-  margin: 0 auto 1rem;
-  border-radius: 4px;
-}
- 
-/* Nivel 2: obras destacadas de cada autor */
+
+/* Estilos para el Nivel 2 de anidamiento (Obras) */
 .nivel-anidado {
   margin: 1rem 0;
   padding-top: 1rem;
@@ -187,101 +131,14 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
- 
-/* Botones */
-.etiqueta {
-  display: inline-block;
-  background: #fdf1e3;
-  color: #a35a0c;
-  border: 1px solid #f3d3ad;
-  padding: 0.2rem 0.7rem;
-  margin: 0 0.4rem 0.4rem 0;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
+
+.nivel-anidado ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
 }
- 
-.etiqueta:hover {
-  background: #f9dfbf;
-}
- 
-.boton-principal,
-.boton-secundario {
-  display: block;
-  width: 100%;
-  margin-top: 0.6rem;
-  padding: 0.6rem 1rem;
-  border-radius: 4px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
- 
-.boton-principal {
-  background: #3498db;
-  color: white;
-  border: none;
-}
- 
-.boton-principal:hover {
-  background: #2980b9;
-}
- 
-.boton-secundario {
-  background: #ffffff;
-  color: #2c3e50;
-  border: 1px solid #ccc;
-}
- 
-.boton-secundario:hover {
-  background: #f0f0f0;
-}
- 
-/* Ventana de detalle */
-dialog {
-  margin: auto;
-  width: min(600px, 92vw);
-  max-height: 90vh;
-  overflow-y: auto;
-  border: none;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
- 
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-}
- 
-dialog img {
-  display: block;
-  max-height: 240px;
-  max-width: 100%;
-  margin: 0 auto 1rem;
-}
- 
-dialog h2 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-}
- 
-dialog p {
-  margin-bottom: 0.6rem;
-}
- 
-dialog h4 {
-  margin-top: 1rem;
-  color: #e67e22;
-}
- 
-dialog ul {
-  padding-left: 1.2rem;
-  margin-bottom: 0.5rem;
-}
- 
-.mensaje-detalle {
-  color: #1f5f8b;
-  font-weight: 500;
-  min-height: 1.5rem;
+
+.nivel-anidado li {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.2rem;
 }

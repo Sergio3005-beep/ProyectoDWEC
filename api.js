@@ -162,6 +162,25 @@ async function obtenerDetalleObra(key) {
   };
 }
 
+// Foto de un autor: la pedimos a la API de Wikipedia por su nombre.
+// Si algo falla (no hay foto, sin internet...) devolvemos null y la tarjeta
+// se queda sin foto: no merece la pena enseñar un error por una imagen.
+async function obtenerFotoAutor(nombre) {
+  try {
+    const datos = await pedir(
+      "https://es.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(nombre),
+      undefined,
+      "Wikipedia",
+    );
+    if (datos && datos.thumbnail && typeof datos.thumbnail.source === "string") {
+      return datos.thumbnail.source;
+    }
+    return null;
+  } catch (error) {
+    return null;
+  }
+}
+
 // ------------------------------------------------------------------
 // Funciones auxiliares
 // ------------------------------------------------------------------
