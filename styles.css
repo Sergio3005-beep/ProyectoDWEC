@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7f6;
@@ -12,24 +12,24 @@ body {
   line-height: 1.6;
   padding: 2rem 1rem;
 }
- 
+
 /* Contenedor principal */
 .container {
   max-width: 1000px;
   margin: 0 auto;
 }
- 
+
 h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #2c3e50;
   font-size: 2.2rem;
 }
- 
+
 .hidden {
   display: none !important;
 }
- 
+
 /* Pestañas */
 .pestanas {
   display: flex;
@@ -38,7 +38,7 @@ h1 {
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
- 
+
 .pestana {
   background: #ffffff;
   color: #2c3e50;
@@ -51,17 +51,17 @@ h1 {
     background-color 0.3s,
     color 0.3s;
 }
- 
+
 .pestana:hover {
   background: #eaf3fb;
 }
- 
+
 .pestana.activa {
   background: #3498db;
   border-color: #3498db;
   color: white;
 }
- 
+
 /* Formularios de búsqueda */
 .formulario {
   display: flex;
@@ -73,7 +73,7 @@ h1 {
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
- 
+
 .formulario input {
   flex: 1;
   min-width: 200px;
@@ -84,11 +84,11 @@ h1 {
   outline: none;
   transition: border-color 0.3s;
 }
- 
+
 .formulario input:focus {
   border-color: #3498db;
 }
- 
+
 .formulario button {
   background-color: #3498db;
   color: white;
@@ -99,11 +99,11 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
- 
+
 .formulario button:hover {
   background-color: #2980b9;
 }
- 
+
 /* Mensajes */
 .mensaje {
   padding: 1rem;
@@ -112,25 +112,25 @@ h1 {
   text-align: center;
   font-weight: 500;
 }
- 
+
 .mensaje.error {
   background-color: #e74c3c;
   color: white;
 }
- 
+
 .mensaje.info {
   background-color: #e8f4fd;
   color: #1f5f8b;
   border: 1px solid #b9dcf5;
 }
- 
+
 /* Cuadrícula de resultados */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
- 
+
 /* Tarjeta (autor, obra o favorito) */
 .tarjeta {
   background: #ffffff;
@@ -142,28 +142,28 @@ h1 {
     transform 0.2s,
     box-shadow 0.2s;
 }
- 
+
 .tarjeta:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
- 
+
 .tarjeta h3 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
- 
+
 .tarjeta p {
   color: #666;
   font-size: 0.95rem;
   margin-bottom: 0.3rem;
 }
- 
+
 .tarjeta-obra {
   border-top-color: #e67e22;
 }
- 
+
 .tarjeta-obra img {
   display: block;
   height: 180px;
@@ -172,14 +172,24 @@ h1 {
   margin: 0 auto 1rem;
   border-radius: 4px;
 }
- 
+
+.foto-autor {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 3px solid #3498db;
+}
+
 /* Nivel 2: obras destacadas de cada autor */
 .nivel-anidado {
   margin: 1rem 0;
   padding-top: 1rem;
   border-top: 1px solid #eee;
 }
- 
+
 .nivel-anidado h4 {
   font-size: 0.95rem;
   color: #e67e22;
@@ -187,7 +197,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
- 
+
 /* Botones */
 .etiqueta {
   display: inline-block;
@@ -201,11 +211,11 @@ h1 {
   cursor: pointer;
   transition: background-color 0.2s;
 }
- 
+
 .etiqueta:hover {
   background: #f9dfbf;
 }
- 
+
 .boton-principal,
 .boton-secundario {
   display: block;
@@ -217,27 +227,27 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s;
 }
- 
+
 .boton-principal {
   background: #3498db;
   color: white;
   border: none;
 }
- 
+
 .boton-principal:hover {
   background: #2980b9;
 }
- 
+
 .boton-secundario {
   background: #ffffff;
   color: #2c3e50;
   border: 1px solid #ccc;
 }
- 
+
 .boton-secundario:hover {
   background: #f0f0f0;
 }
- 
+
 /* Ventana de detalle */
 dialog {
   margin: auto;
@@ -249,37 +259,37 @@ dialog {
   padding: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
- 
+
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
- 
+
 dialog img {
   display: block;
   max-height: 240px;
   max-width: 100%;
   margin: 0 auto 1rem;
 }
- 
+
 dialog h2 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
 }
- 
+
 dialog p {
   margin-bottom: 0.6rem;
 }
- 
+
 dialog h4 {
   margin-top: 1rem;
   color: #e67e22;
 }
- 
+
 dialog ul {
   padding-left: 1.2rem;
   margin-bottom: 0.5rem;
 }
- 
+
 .mensaje-detalle {
   color: #1f5f8b;
   font-weight: 500;
