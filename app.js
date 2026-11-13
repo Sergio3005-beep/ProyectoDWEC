@@ -406,6 +406,59 @@ document.addEventListener("DOMContentLoaded", () => {
     resultados.innerHTML = "";
   }
 
+  // ------------------------------------------------------------------
+  // SUGERENCIAS en el formulario de obras
+  // Con los autores de nuestra API privada rellenamos las dos listas
+  // desplegables (<datalist>) para que el usuario no tenga que adivinar.
+  // ------------------------------------------------------------------
+  // Rellena una lista desplegable con los valores que le pasemos (sin repetidos)
+  function rellenarLista(idLista, valores, etiqueta) {
+    const lista = document.getElementById(idLista);
+    const yaPuestos = new Set();
+    valores.forEach((valor) => {
+      if (valor === undefined || valor === null || valor === "") return;
+      if (yaPuestos.has(String(valor))) return;
+      yaPuestos.add(String(valor));
+      const opcion = document.createElement("option");
+      opcion.value = valor;
+      opcion.textContent = valor; // necesario para que los <select> muestren el texto
+      if (etiqueta) opcion.label = etiqueta(valor);
+      lista.appendChild(opcion);
+    });
+  }
+
+  async function cargarSugerencias() {
+    // Años típicos para el formulario de obras (no dependen de la API)
+    rellenarLista("anoObraInput", [1900, 1910, 1920, 1925, 1930, 1935, 1940, 1950]);
+
+    try {
+      const autores = await obtenerAutores();
+
+      // Formulario de autores
+      rellenarLista("listaNombres", autores.map((a) => a.nombre));
+      rellenarLista("listaLugares", autores.map((a) => a.lugar_nacimiento));
+      rellenarLista(
+        "anoInput",
+        autores.map((a) => a.nacimiento).sort((x, y) => x - y),
+      );
+
+      // Formulario de obras
+      rellenarLista("listaAutores", autores.map((a) => a.nombre));
+
+      const titulos = [];
+      autores.forEach((autor) => {
+        if (Array.isArray(autor.obras_destacadas)) {
+          autor.obras_destacadas.forEach((obra) => titulos.push(obra));
+        }
+      });
+      rellenarLista("listaTitulos", titulos);
+    } catch (error) {
+      // Las sugerencias son un extra: si fallan, el formulario sigue funcionando
+    }
+  }
+
+  cargarSugerencias();
+
   // Al abrir la página, mostramos todos los autores
   formAutores.requestSubmit();
 });

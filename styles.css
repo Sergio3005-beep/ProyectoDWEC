@@ -117,7 +117,118 @@ h1 {
     margin-bottom: 0.3rem;
 }
 
-/* Estilos para el Nivel 2 de anidamiento (Obras) */
+.formulario input,
+.formulario select {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #3498db;
+}
+
+.formulario button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #2980b9;
+}
+
+/* Mensajes */
+.mensaje {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.mensaje.error {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.mensaje.info {
+  background-color: #e8f4fd;
+  color: #1f5f8b;
+  border: 1px solid #b9dcf5;
+}
+
+/* Cuadrícula de resultados */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta (autor, obra o favorito) */
+.tarjeta {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #3498db;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.tarjeta p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.tarjeta-obra {
+  border-top-color: #e67e22;
+}
+
+.tarjeta-obra img {
+  display: block;
+  height: 180px;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+}
+
+.foto-autor {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 3px solid #3498db;
+}
+
+/* Nivel 2: obras destacadas de cada autor */
 .nivel-anidado {
   margin: 1rem 0;
   padding-top: 1rem;

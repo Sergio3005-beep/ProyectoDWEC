@@ -19,30 +19,45 @@
 
       <!-- Búsqueda 1: autores (API privada) - 3 parámetros -->
       <form id="formAutores" class="formulario">
-        <input type="text" id="nombreInput" placeholder="Nombre del autor..." />
-        <input type="text" id="lugarInput" placeholder="Lugar de nacimiento..." />
         <input
-          type="number"
-          id="anoInput"
-          placeholder="Nacido a partir del año..."
-          min="1800"
-          max="2000"
+          type="text"
+          id="nombreInput"
+          list="listaNombres"
+          placeholder="Nombre del autor..."
         />
+        <input
+          type="text"
+          id="lugarInput"
+          list="listaLugares"
+          placeholder="Lugar de nacimiento..."
+        />
+        <select id="anoInput">
+          <option value="">Nacido a partir del año (cualquiera)</option>
+        </select>
         <button type="submit">Buscar autores</button>
+
+        <!-- Sugerencias (se rellenan desde app.js) -->
+        <datalist id="listaNombres"></datalist>
+        <datalist id="listaLugares"></datalist>
       </form>
 
       <!-- Búsqueda 2: obras (API pública) - 3 parámetros -->
       <form id="formObras" class="formulario hidden">
-        <input type="text" id="tituloInput" placeholder="Título de la obra..." />
-        <input type="text" id="autorInput" placeholder="Autor..." />
         <input
-          type="number"
-          id="anoObraInput"
-          placeholder="Publicada a partir del año..."
-          min="1000"
-          max="2100"
+          type="text"
+          id="tituloInput"
+          list="listaTitulos"
+          placeholder="Título de la obra..."
         />
+        <input type="text" id="autorInput" list="listaAutores" placeholder="Autor..." />
+        <select id="anoObraInput">
+          <option value="">Publicada a partir del año (cualquiera)</option>
+        </select>
         <button type="submit">Buscar obras</button>
+
+        <!-- Sugerencias que salen al escribir (se rellenan desde app.js) -->
+        <datalist id="listaTitulos"></datalist>
+        <datalist id="listaAutores"></datalist>
       </form>
 
       <!-- Mensajes -->
